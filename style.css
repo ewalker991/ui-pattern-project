@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
+
+body {
+    background-color: rgb(255, 249, 240);
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+}
+
+.logo {
+    max-width: 600px;
+}
+
+.tabcontent {
+    overflow: hidden;
+    border: 1px solid rgb(185, 207, 177);
+    background-color: white;
+}
+
+.tablinks {
+    background-color: white;
+    float: center;
+    outline: none;
+    border: none;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
