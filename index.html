@@ -13,20 +13,24 @@
 <body>
     <h1><img class="logo" src="images/studio-ghibli.png" alt="Studio Ghibli"></h1>
 
-    <div class="tabButtons">
-        <button class="tablinks" onclick="openInfo(event, 'Movies')">Movies</button>
-        <button class="tablinks" onclick="openInfo(event, 'Characters')">Characters</button>
-    </div>
+    <div id="tabbed-content">
+        <ul class="tabs">
+            <li data-target="#movies" class="active">Movies</li>
+            <li data-target="#characters">Characters</li>
+        </ul>
 
-    <div id="movies" class="tabcontent">
-        <!-- <h3>Movies</h3> -->
-    </div>
-    <div id="characters" class="tabcontent">
-        <!-- <h3>Characters</h3> -->
-    </div>
+        <div class="panel active" id="movies">
+            <h3>Movies</h3>
+            <p>Hello hi hello hey? 2</p>
+        </div>
 
-
+        <div class="panel" id="characters">
+            <h3>Characters</h3>
+            <p>Hello hi hello hey? 658765</p>
+        </div>
+    </div>
 </body>
+
 <script src="script.js"></script>
 
 </html>

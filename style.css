@@ -1,27 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
 
 body {
-    background-color: rgb(255, 249, 240);
+    background-color: rgb(236, 238, 203);
     text-align: center;
     font-family: 'Cormorant Garamond', serif;
     font-size: 22px;
+    margin: 0 auto;
 }
 
 .logo {
     max-width: 600px;
 }
 
-.tabcontent {
-    overflow: hidden;
-    border: 1px solid rgb(185, 207, 177);
+#tabbed-content li {
+    display: inline-block;
+    padding: 10px 14px;
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+    align-content: center;
+}
+
+#tabbed-content .panel {
+    /* max-width: 600px; */
+    position: relative;
+    display: none;
+    border: 1px solid rgb(166, 180, 145);
+    padding: 0 10px;
+    border-radius: 4px;
+    margin: 10px;
+}
+
+#tabbed-content .panel.active {
+    display: block;
     background-color: white;
 }
 
-.tablinks {
-    background-color: white;
-    float: center;
-    outline: none;
-    border: none;
-    padding: 14px 16px;
-    transition: 0.3s;
+@media screen and (max-device-width: 500px) {
+
+    body {
+        /* margin: 0 auto; */
+        width: 140vw;
+        padding: 10px;
+        /* margin-left: 2px; */
+    }
+
+    .tabbed-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .tabbed-content {
+        flex-direction: column;
+        align-items: center;
+    }
 }
