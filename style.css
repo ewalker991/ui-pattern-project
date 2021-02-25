@@ -54,7 +54,7 @@ body {
 
     body {
         position: absolute;
-        max-width: 104vw;
+        max-width: 108vw;
     }
 
     .logo {
@@ -62,8 +62,12 @@ body {
         /* padding: 5px; */
     }
 
-    .tabbed-content {
+    #tabbed-content .panel {
+        max-width: 90vw;
         display:none;
+        margin: 0 auto;
+        margin-bottom: 10px;
+        position: relative;
     }
 }
 
