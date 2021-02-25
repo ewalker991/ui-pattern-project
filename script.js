@@ -76,3 +76,42 @@ request.send();
 
 
 
+const app2 = document.getElementById('characters');
+
+const container2 = document.createElement('div');
+container2.setAttribute('class', 'container2');
+
+app2.appendChild(container2);
+
+let request2 = new XMLHttpRequest();
+request2.open('GET', 'https://ghibliapi.herokuapp.com/people', true);
+request2.onload = function () {
+
+    let data = JSON.parse(this.response);
+    if (request2.status >= 200 && request2.status < 400) {
+        data.forEach(people => {
+            const charaCard = document.createElement('div');
+            charaCard.setAttribute('class', 'charaCard');
+
+            const h1 = document.createElement('h1');
+            h1.textContent = people.name;
+            
+            const p = document.createElement("p");
+            people.age = people.age.substring(0, 300);
+            p.textContent = `Age: ${people.age}`;
+
+            container2.appendChild(charaCard);
+            charaCard.appendChild(h1);
+            charaCard.appendChild(p);
+        });
+    } else {
+        const errorMessage = document.createElement('marquee');
+        errorMessage.textContent = `Gah, it's not working!`;
+        app.appendChild(errorMessage);
+    }
+}
+
+
+request2.send();
+
+
